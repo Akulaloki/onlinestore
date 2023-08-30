@@ -35,4 +35,19 @@ export class UserService {
     // Make an HTTP POST request to add the user data to the JSON server
     return this.http.post(`${this.userDataUrl}`, user);
   }
-}
+  addUser(user: any): Observable<any> {
+    // Make an HTTP POST request to add the user data to the JSON server
+    return this.http.post(`${this.userDataUrl}`, user);
+  }
+  deleteUser(userId: number): Observable<any> {
+    const url = `${this.userDataUrl}/${userId}`;
+    return this.http.delete(url);
+  }
+  editUser(editedUser: any): Observable<any> {
+    return this.http.put(`${this.userDataUrl}/${editedUser.id}`, editedUser);
+  }
+
+  
+  }
+
+

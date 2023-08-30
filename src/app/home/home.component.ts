@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
   }
   logout() {
     // Display a confirmation prompt
-    const confirmLogout = window.confirm('Are you sure you want to log out from MyShop application?');
+    const confirmLogout = window.confirm('Are you sure you want to logout from MyShop application?');
   
     // If user confirms, navigate to login page
     if (confirmLogout) {
